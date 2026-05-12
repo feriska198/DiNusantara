@@ -87,163 +87,241 @@
 <div class="overlay">
 
     <!-- NAVBAR -->
-    <nav id="navbar" class="fixed w-full top-0 z-50 flex justify-between items-center px-10 py-6 navbar-solid">
+   <nav id="navbar" class="fixed w-full top-0 z-50 flex justify-between items-center px-16 py-8 navbar-solid">
+    <!-- LOGO: Ukuran sedikit diperbesar -->
+    <h1 class="flex items-center text-2xl font-bold tracking-tight">
+        <img src="{{ asset('img/logo_awan.png') }}" alt="Logo" class="h-10 w-auto mr-2">
+        <span class="text-white">Di</span><span class="gold">Nusantara</span>
+    </h1>
 
-        <h1 class="flex items-center text-xl font-bold">
-            <img src="{{ asset('img/logo_awan.png') }}" alt="Logo" class="h-8 w-auto">
+    <!-- MENU: Font diperbesar (text-lg) dan Gap ditambah (gap-14) -->
+    <div class="hidden md:flex gap-14 text-gray-300 text-lg font-medium tracking-wide">
+        <a href="#" class="hover:text-white transition-colors">Home</a>
+        <a href="#" class="hover:text-white transition-colors">Artists</a>
+        <a href="#" class="hover:text-white transition-colors">About</a>
+        <a href="#" class="hover:text-white transition-colors">Artworks</a>
+        <a href="#" class="hover:text-white transition-colors">Categories</a>
+    </div>
 
-            <span class="text-white">Di</span><span class="gold">Nusantara</span>
-        </h1>
+    <!-- KANAN: Search bar dibuat lebih lebar agar tidak terlihat 'pelit' space -->
+    <div class="flex items-center gap-6">
+        <input type="text" placeholder="Search..."
+            class="bg-white/10 px-6 py-2 rounded-full text-base outline-none w-48 focus:w-64 transition-all duration-300">
 
-        <div class="hidden md:flex gap-10 text-gray-300 text-[15px]">
-            <a href="#" class="hover:text-white">Home</a>
-            <a href="#" class="hover:text-white">Artists</a>
-            <a href="#" class="hover:text-white">About</a>
-            <a href="#" class="hover:text-white">Artworks</a>
-            <a href="#" class="hover:text-white">Categories</a>
-        </div>
+        <a href="{{ route('login') }}" class="btn-animated px-6 py-2 rounded-full text-base font-semibold inline-block">
+            Sign Up
+        </a>
+    </div>
 
-        <div class="flex items-center gap-4">
-            <input type="text" placeholder="Search..."
-                class="bg-white/10 px-4 py-1 rounded-full text-sm outline-none">
-
-           <button class="btn-animated px-4 py-1 rounded-full text-sm font-medium">
-                Sign Up
-            </button>
-        </div>
-
-    </nav>
+</nav>
 
 
     
     <!-- HERO -->
     <section class="flex flex-col md:flex-row items-center px-12 pt-32 gap-10">
 
-        <!-- LEFT -->
-        <div class="md:w-1/2 space-y-6">
+       <!-- Tambahkan ml-16 untuk pergeseran yang cukup terasa -->
+<div class="md:w-1/2 space-y-6 ml-16">
 
-            <h1 class="text-5xl leading-tight">
-                <span class="gold">Discover Timeless Art,</span><br>
-                Curated for You
-            </h1>
+    <h1 class="text-5xl leading-tight">
+        <span class="gold">Discover Timeless Art,</span><br>
+        Curated for You
+    </h1>
 
-            <p class="text-gray-300 max-w-md">
-                Explore a refined collection of artworks from talented artists 
-                around the world. Each piece tells a story.
-            </p>
+    <p class="text-gray-300 max-w-md">
+        Explore a refined collection of artworks from talented artists 
+        around the world. Each piece tells a story.
+    </p>
 
-          <button class="btn-animated px-6 py-3 rounded-full font-semibold">
-                Discover Art
-          </button>
-
-        </div>
-
-        <!-- RIGHT IMAGES -->
-        <div class="md:w-1/2 flex justify-center relative">
-
-                <img src="{{ asset('img/image_5.png') }}" 
-                    class="absolute w-[400px] opacity-20 blur-2xl -z-10">
-
-                <div class="flex gap-6">
-
-                <div class="flex flex-col gap-6">
-                    <img src="{{ asset('img/image_8.png') }}" 
-                        class="art-card w-52 h-70 object-cover object-[20%_30%] rounded-tl-[30px] rounded-br-[30px] rounded-tr-lg rounded-bl-md">
-
-                    <img src="{{ asset('img/image_10.png') }}"  
-                        class="art-card w-44 h-51 object-cover object-[20%_30%] rounded-tr-[40px] rounded-tl-[10px] rounded-br-[10px] rounded-bl-[10px]">
-                </div>
-
-                <div class="flex flex-col gap-6 mt-16">
-                    <img src="{{ asset('img/image_9.png') }}" 
-                        class="art-card w-44 h-52 object-cover rounded-tr-[30px] rounded-tl-[10px] rounded-br-[10px] rounded-[40px]">
-
-                    <img src="{{ asset('img/image_11.png') }}" 
-                        class="art-card w-52 h-52 object-cover object-[20%_30%] rounded-2xl">
-                </div>
-
-                <div class="flex flex-col justify-center">
-                    <img src="{{ asset('img/image_7.png') }}" 
-                        class="art-card w-52 h-80 object-cover rounded-tr-[40px] rounded-br-[40px] rounded-2xl">
-                </div>
-
-            </div>
-        </div>
-
-    </section>
-
-    <section class="px-12 py-32 bg-black/30 backdrop-blur-sm">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        
-        <div class="flex justify-center">
-            <img src="img/image_10.png" alt="Art Portrait" class="rounded-3xl shadow-2xl w-full max-w-md">
-        </div>
-
-        <div class="space-y-6 text-left">
-            <h4 class="text-gray-400 tracking-widest uppercase text-sm">About Us</h4>
-            
-           <h2 class="text-4xl md:text-6xl font-serif leading-tight">
-                <span class="text-white whitespace-nowrap">Art deserves to be felt</span><br>
-                <span class="gold">not just seen</span>
-           </h2>
-
-            <p class="text-gray-300 text-lg leading-relaxed max-w-lg">
-                DiNusantara is a curated digital space where timeless artworks 
-                and emerging artists come together through visual storytelling, 
-                creativity, and emotion.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<!-- OUR VISION -->
-<section class="px-12 py-32">
-
-   <div class="max-w-6xl mx-auto space-y-24 py-20 px-6">
-
-    <div class="space-y-4 max-w-3xl">
-        <h2 class="text-5xl font-serif">
-            <span class="text-white">Our</span> <span class="gold">Vision</span>
-        </h2>
-        <h3 class="gold text-xl italic">We believe art is more than decoration.</h3>
-        <p class="text-gray-300 leading-relaxed text-sm">
-            Every brushstroke, texture, and color carries meaning, memory, and human expression. 
-            DiNusantara exists to create a space where artworks can be appreciated beyond endless 
-            scrolling and fleeting trends. Tiny jab at modern internet culture there. Humanity 
-            turned masterpieces into content thumbnails. Remarkable species.
-        </p>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div class="space-y-6">
-            <h2 class="text-5xl font-serif leading-tight">
-                <span class="text-white">Why We Created</span><br>
-                <span class="gold">DiNusantara</span>
-            </h2>
-            <p class="text-gray-300 leading-relaxed">
-                DiNusantara was created to give artists a space where creativity, storytelling, 
-                and timeless expression can be truly appreciated.
-            </p>
-        </div>
-
-        <div class="flex justify-end">
-            <img src="{{ asset('img/image_0.png') }}" alt="Art Illustration" 
-                 class="rounded-3xl shadow-2xl w-full max-w-sm object-cover aspect-[4/5]">
-        </div>
-    </div>
+    <button class="btn-animated px-6 py-3 rounded-full font-semibold">
+        Discover Art
+    </button>
 
 </div>
 
-<section class="px-12 py-32 bg-black backdrop-blur-sm">
-    </section>
+        <!-- RIGHT IMAGES -->
 
+        <div class="md:w-1/2 flex justify-center relative">
+
+    <!-- BLUR -->
+    <img 
+        src="{{ asset('img/image_5.png') }}" 
+        class="absolute w-[420px] opacity-20 blur-3xl -z-10"
+    >
+
+    <div class="flex gap-6">
+
+        <!-- LEFT COLUMN -->
+        <div class="flex flex-col gap-6">
+            
+            <img 
+                src="{{ asset('img/image_8.png') }}" 
+                class="art-card w-52 h-72 object-cover object-[20%_30%]
+                rounded-tl-[30px] rounded-br-[30px]
+                rounded-tr-lg rounded-bl-md"
+            >
+
+            <img 
+                src="{{ asset('img/image_10.png') }}"  
+                class="art-card w-52 h-52 object-cover object-[20%_30%]
+                rounded-tr-[40px] rounded-tl-[10px]
+                rounded-br-[10px] rounded-bl-[10px]"
+            >
+
+        </div>
+
+       <!-- MIDDLE COLUMN (Sebagai acuan tinggi h-52) -->
+
+        <div class="flex flex-col gap-6 mt-16">
+            <img 
+                src="{{ asset('img/image_9.png') }}" 
+                class="art-card w-52 h-52 object-cover
+                rounded-tr-[30px] rounded-tl-[10px]
+                rounded-br-[10px] rounded-bl-[40px]"
+            >
+
+            <img 
+                src="{{ asset('img/image_11.png') }}" 
+                class="art-card w-52 h-52 object-cover object-[20%_30%]
+                rounded-2xl"
+            >
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <!-- Ganti 'justify-center' menjadi 'justify-end' agar nempel ke bawah sejajar image_11 -->
+        <div class="flex flex-col justify-end">
+    <img 
+        src="{{ asset('img/image_7.png') }}" 
+        class="art-card w-52 h-52 object-cover 
+               rounded-tr-[40px] rounded-br-[40px] 
+               rounded-2xl mb-5" 
+    >
+</div>
+     </div>
+
+ </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="px-6 md:px-12 py-32 bg-black/30 backdrop-blur-sm">
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+
+        <!-- LEFT COLUMN (IMAGE + VISION) -->
+        <div class="space-y-20">
+
+            <!-- IMAGE -->
+            <img 
+                src="img/image_10.png" 
+                alt="Art Portrait" 
+                class="w-full max-w-md rounded-3xl shadow-2xl object-cover"
+            >
+
+            <!-- VISION (UNDER IMAGE) -->
+            <div class="space-y-6">
+
+                <h2 class="text-4xl md:text-5xl font-serif leading-tight">
+                    <span class="text-white">Our</span>
+                    <span class="gold">Vision</span>
+                </h2>
+
+                <h3 class="text-3xl italic gold">
+                    We believe art is more than decoration.
+                </h3>
+
+                <p class="text-xl text-gray-300 leading-relaxed">
+                    Every brushstroke, texture, and color carries meaning,
+                    memory, and human expression. DiNusantara exists to create
+                    a space where artworks can be appreciated beyond endless
+                    scrolling and fleeting trends.
+                </p>
+
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Tiny jab at modern internet culture there. Humanity turned
+                    masterpieces into content thumbnails. Remarkable species.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN (ABOUT ONLY) -->
+        <div class="space-y-6">
+
+            <h4 class="text-sm uppercase tracking-[0.3em] text-gray-400">
+                About Us
+            </h4>
+
+            <h2 class="text-4xl md:text-6xl font-serif leading-tight">
+                <span class="text-white block">
+                    Art deserves to be felt
+                </span>
+                <span class="gold block mt-2">
+                    not just seen
+                </span>
+            </h2>
+
+            <p class="max-w-xl text-lg leading-relaxed text-gray-300">
+                DiNusantara is a curated digital space where timeless artworks
+                and emerging artists come together through visual storytelling,
+                creativity, and emotion.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY WE CREATED SECTION -->
+<section class="px-6 md:px-12 py-32">
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+
+        <!-- TEXT -->
+        <div class="space-y-6 pt-4">
+            
+            <h2 class="text-4xl md:text-5xl font-serif leading-tight">
+                <span class="text-white block">
+                    Why We Created
+                </span>
+
+                <span class="gold block mt-2">
+                    DiNusantara
+                </span>
+            </h2>
+
+            <p class="text-gray-300 leading-relaxed max-w-xl">
+                DiNusantara was created to give artists a space where
+                creativity, storytelling, and timeless expression can be
+                truly appreciated.
+            </p>
+
+        </div>
+
+        <!-- IMAGE -->
+        <div class="flex justify-center md:justify-end">
+            <img 
+                src="{{ asset('img/image_0.png') }}" 
+                alt="Art Illustration"
+                class="w-full max-w-sm aspect-[4/5] object-cover rounded-3xl shadow-2xl"
+            >
+        </div>
+
+    </div>
+
+</section>
+
+     <!-- artis -->
+
+<section class="py-24 px-12 bg-black">
     <div class="max-w-6xl mx-auto text-left mb-16 space-y-4">
         <h2 class="text-4xl md:text-5xl font-serif">
-            <span class="text-white">Meet the</span> <span class="gold">Visionaries</span>
+            <span class="text-white">Meet the</span> <span class="text-[#A68A56]">Visionaries</span>
         </h2>
-        <h3 class="gold text-lg">Souls Behind The Canvas</h3>
-        <p class="text-gray-300 max-w-3xl leading-relaxed text-sm">
+        <h3 class="text-[#D4AF37] text-lg font-medium italic">Souls Behind The Canvas</h3>
+        <p class="text-gray-400 max-w-3xl leading-relaxed text-sm">
             Art is a silent language that speaks to the soul. Discover the unique perspectives and 
             profound passions of the creators who transform raw emotion into timeless visual narratives.
         </p>
@@ -251,25 +329,88 @@
 
     <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
 
-        <div class="relative group">
+        <div class="relative group cursor-pointer">
             <img src="{{ asset('img/pablopicaso.png') }}" 
-                 class="w-full aspect-square object-cover rounded-[2.5rem] shadow-xl">
-        </div>
+                 class="w-full aspect-square object-cover rounded-[2.5rem] shadow-xl transition-all duration-500 group-hover:scale-105">
+            
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out flex flex-col overflow-hidden rounded-[2.5rem] bg-white scale-95 group-hover:scale-100 z-20 shadow-2xl">
+                <div class="h-2/5 w-full bg-cover bg-center relative" style="background-image: url('{{ asset('img/image_5.png') }}');">
+                    <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full border-4 border-white bg-gray-200 overflow-hidden shadow-md">
+                        <img src="{{ asset('img/pablobulat.png') }}" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="h-3/5 pt-10 px-6 pb-6 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-xl font-bold text-black uppercase tracking-tight">Pablo Picasso</h4>
+                        <p class="text-[11px] text-gray-500 leading-tight mt-1">
+                            Pioneer of Cubism and one of the most influential artists of the 20th century.
+                        </p>
+                        <p class="text-[11px] text-[#c5a47e] mt-2 font-semibold">Spanish Artist</p>
+                    </div>
+                    <div class="flex justify-between items-end border-t border-gray-100 pt-4">
+                        <span class="text-[10px] text-gray-400">Active Since 1894</span>
+                        <a href="#" class="text-xs font-bold text-black flex items-center gap-1 hover:underline">Details <span class="text-lg">></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>    
 
-        <div class="relative group">
+        <div class="relative group cursor-pointer">
             <img src="{{ asset('img/susana.png') }}" 
-                 class="w-full aspect-square object-cover rounded-[2.5rem] shadow-xl">
+                 class="w-full aspect-square object-cover rounded-[2.5rem] shadow-xl transition-all duration-500 group-hover:scale-105">
+            
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out flex flex-col overflow-hidden rounded-[2.5rem] bg-white scale-95 group-hover:scale-100 z-20 shadow-2xl">
+                <div class="h-2/5 w-full bg-cover bg-center relative" style="background-image: url('{{ asset('img/image_5.png') }}');">
+                    <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full border-4 border-white bg-gray-200 overflow-hidden shadow-md">
+                        <img src="{{ asset('img/susanabulat.png') }}" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="h-3/5 pt-10 px-6 pb-6 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-xl font-bold text-black uppercase tracking-tight">Susana</h4>
+                        <p class="text-[11px] text-gray-500 leading-tight mt-1">
+                            Capturing the essence of human emotion through soft, contemporary strokes.
+                        </p>
+                        <p class="text-[11px] text-[#c5a47e] mt-2 font-semibold">Indonesian Artist</p>
+                    </div>
+                    <div class="flex justify-between items-end border-t border-gray-100 pt-4">
+                        <span class="text-[10px] text-gray-400">Active Since 2010</span>
+                        <a href="#" class="text-xs font-bold text-black flex items-center gap-1 hover:underline">Details <span class="text-lg">></span></a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="relative group">
+        <div class="relative group cursor-pointer">
             <img src="{{ asset('img/basuki.png') }}" 
-                 class="w-full aspect-square object-cover rounded-[2.5rem] shadow-xl">
+                 class="w-full aspect-square object-cover rounded-[2.5rem] shadow-xl transition-all duration-500 group-hover:scale-105">
+            
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out flex flex-col overflow-hidden rounded-[2.5rem] bg-white scale-95 group-hover:scale-100 z-20 shadow-2xl">
+                <div class="h-2/5 w-full bg-cover bg-center relative" style="background-image: url('{{ asset('img/image_5.png') }}');">
+                    <div class="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-20 h-20 rounded-full border-4 border-white bg-gray-200 overflow-hidden shadow-md">
+                        <img src="{{ asset('img/basukibulat.png') }}" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="h-3/5 pt-10 px-6 pb-6 flex flex-col justify-between">
+                    <div>
+                        <h4 class="text-xl font-bold text-black uppercase tracking-tight">Basuki Abdullah</h4>
+                        <p class="text-[11px] text-gray-500 leading-tight mt-1">
+                            A legendary maestro known for realism and capturing natural beauty.
+                        </p>
+                        <p class="text-[11px] text-[#c5a47e] mt-2 font-semibold">Indonesian Artist</p>
+                    </div>
+                    <div class="flex justify-between items-end border-t border-gray-100 pt-4">
+                        <span class="text-[10px] text-gray-400">Active Since 1930</span>
+                        <a href="#" class="text-xs font-bold text-black flex items-center gap-1 hover:underline">Details <span class="text-lg">></span></a>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
-
 </section>
 
+
+        <!-- STOP -->
 
 <section
      class="px-4 py-24 bg-black/30 flex flex-col items-center overflow-hidden min-h-screen">
