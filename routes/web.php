@@ -13,6 +13,10 @@ Route::get('/login', function () {
     return view('sign'); 
 })->name('login');
 
+// Halaman Kumpulan Lukisan (Artworks)
+Route::get('/artworks', function () {
+    return view('artworks');
+})->name('artworks');
 
 // Route Testing kamu
 Route::get('/testing', [GalleryController::class, 'index']);
